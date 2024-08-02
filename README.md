@@ -11,7 +11,7 @@ npm install --save-dev pear-interface
 ```
 
 ```js
-/** @typedef {import('pear-interface')} */)
+/** @typedef {import('pear-interface')} */
 ```
 
 Pear Runtime automatically updates pear-interface in place so types are always synced to Pear.
