@@ -11,11 +11,9 @@
   "author": "Holepunch",
   "license": "Apache-2.0",
   "dependencies": {
-    "bare-fs": "^2.3.1",
-    "bare-pipe": "^3.3.2",
+    "bare-pipe": "^3.3.7",
     "streamx": "^2.18.0"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/holepunchto/pear-interface.git"
