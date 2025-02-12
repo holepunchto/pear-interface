@@ -40,10 +40,36 @@
  */
 
 /**
+ * @typedef {Object} PearTrayOptions
+ * @property {string} [icon] - Optional icon for the tray.
+ * @property {{ [key: string]: string }} [menu] - Optional menu where each key is a menu item identifier and each value is the label for display.
+ * @property {{ win32: boolean, linux: boolean, darwin: boolean }} [os] - Optional object with boolean values for each OS to enable the tray.
+ */
+
+/**
+ * @callback PearTrayListener
+ * @param {string} key - The menu item identifier.
+ * @returns {void}
+ */
+
+/**
+ * @callback PearUntray - Function to remove the tray.
+ * @returns {Promise<void>}
+ */
+
+/**
+ * @typedef {Object} PearTray
+ * @property {boolean} darkMode - Indicates if dark mode is enabled.
+ * @property {number} scaleFactor - The scale factor used for the tray.
+ * @type {function(PearTrayOptions=, PearTrayListener=): Promise<PearUntray>}
+ */
+
+/**
  * @typedef {Object} Pear
  * @property {PearConfig} config - Application configuration object.
  * @property {PearIdentity} identity - Manages identity.
  * @property {PearWorker} worker - Manages worker.
+ * @property {PearTray} tray - Function to set up the tray.
  * @property {function(string): Promise<void>} message - Sends a message.
  * @property {function((Object|function(Object)), function(Object)=): StreamxReadable} messages - Subscribes to messages.
  * @property {function(Object): Promise<void>} checkpoint - Sets Pear.config.checkpoint state.
