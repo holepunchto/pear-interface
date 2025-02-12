@@ -59,9 +59,7 @@
  */
 
 /**
- * @typedef {Object} PearTrayObj
- * @property {boolean} darkMode
- * @property {boolean} scaleFactor
+ * @typedef {{ darkMode: boolean, scaleFactor: boolean }} PearTrayObj
  */
 
 /**
