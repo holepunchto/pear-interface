@@ -55,18 +55,11 @@
  */
 
 /**
- * @typedef {Object} PearTray
- * @property {boolean} darkMode - Indicates if dark mode is enabled.
- * @property {number} scaleFactor - The scale factor used for the tray.
- * @type {function(PearTrayOptions=, PearTrayListener=): PearUntray}
- */
-
-/**
  * @typedef {Object} Pear
  * @property {PearConfig} config - Application configuration object.
  * @property {PearIdentity} identity - Manages identity.
  * @property {PearWorker} worker - Manages worker.
- * @property {PearTray} tray - Function to set up the tray.
+ * @property {(function(PearTrayOptions=, PearTrayListener=): PearUntray) | { darkMode: boolean, scaleFactor: boolean }} tray - Function to set up the tray.
  * @property {function(string): Promise<void>} message - Sends a message.
  * @property {function((Object|function(Object)), function(Object)=): StreamxReadable} messages - Subscribes to messages.
  * @property {function(Object): Promise<void>} checkpoint - Sets Pear.config.checkpoint state.
