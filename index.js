@@ -47,13 +47,11 @@
  */
 
 /**
- * @typedef PearTrayListener
- * @type {(key: string) => void} - Function to handle tray menu item clicks.
+ * @typedef {(key: string) => void} PearTrayListener - Function to handle tray menu item clicks.
  */
 
 /**
- * @typedef PearUntray - Function to remove the tray.
- * @type {() => Promise<void>}
+ * @typedef {() => Promise<void>} PearUntray - Function to remove the tray.
  */
 
 /**
