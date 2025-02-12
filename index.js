@@ -48,7 +48,7 @@
 
 /**
  * @typedef PearTrayListener
- * @type {(key: string) => Promise<void>} - Function to handle tray menu item clicks.
+ * @type {(key: string) => void} - Function to handle tray menu item clicks.
  */
 
 /**
