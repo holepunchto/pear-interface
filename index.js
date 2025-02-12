@@ -47,21 +47,20 @@
  */
 
 /**
- * @callback PearTrayListener
- * @param {string} key - The menu item identifier.
- * @returns {void}
+ * @typedef PearTrayListener
+ * @type {(key: string) => Promise<void>} - Function to handle tray menu item clicks.
  */
 
 /**
- * @callback PearUntray - Function to remove the tray.
- * @returns {Promise<void>}
+ * @typedef PearUntray - Function to remove the tray.
+ * @type {() => Promise<void>}
  */
 
 /**
  * @typedef {Object} PearTray
  * @property {boolean} darkMode - Indicates if dark mode is enabled.
  * @property {number} scaleFactor - The scale factor used for the tray.
- * @type {function(PearTrayOptions=, PearTrayListener=): Promise<PearUntray>}
+ * @type {function(PearTrayOptions=, PearTrayListener=): PearUntray}
  */
 
 /**
