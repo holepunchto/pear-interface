@@ -40,10 +40,11 @@
  */
 
 /**
- * @typedef {Object} PearTrayOptions
- * @property {string} [icon] - Optional icon for the tray.
- * @property {{ [key: string]: string }} [menu] - Optional menu where each key is a menu item identifier and each value is the label for display.
- * @property {{ win32: boolean, linux: boolean, darwin: boolean }} [os] - Optional object with boolean values for each OS to enable the tray.
+ * @typedef {{
+ *   icon?: string,  // Optional icon for the tray.
+ *   menu?: { [key: string]: string },  // Optional menu where each key is a menu item identifier and each value is the label for display.
+ *   os?: { win32?: boolean, linux?: boolean, darwin?: boolean }  // Optional object with boolean values for each OS to enable the tray.
+ * }} PearTrayOptions
  */
 
 /**
@@ -56,7 +57,7 @@
 
 /**
  * @typedef {{
- *   (PearTrayOptions=, PearTrayListener=): PearUntray,
+ *   (opts?: PearTrayOptions, listener?: PearTrayListener): PearUntray,
  *   darkMode: boolean,
  *   scaleFactor: boolean
  * }} PearTray
@@ -79,6 +80,8 @@
  * @property {function(function()): Promise<void>} teardown - Registers a teardown function.
  * @property {function(number=): void} exit - Exits the application with optional exit code, default 0.
  */
+
+Pear.tray({ icon2: '' }, (key) => {})
 
 /**
  * @typedef {Object} PearGUI
