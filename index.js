@@ -55,11 +55,11 @@
  */
 
 /**
- * @typedef {function(PearTrayOptions=, PearTrayListener=): PearUntray} PearTrayFn - Function to set up the tray.
- */
-
-/**
- * @typedef {{ darkMode: boolean, scaleFactor: boolean }} PearTrayObj
+ * @typedef {{
+ *   (PearTrayOptions=, PearTrayListener=): PearUntray,
+ *   darkMode: boolean,
+ *   scaleFactor: boolean
+ * }} PearTray
  */
 
 /**
@@ -67,7 +67,7 @@
  * @property {PearConfig} config - Application configuration object.
  * @property {PearIdentity} identity - Manages identity.
  * @property {PearWorker} worker - Manages worker.
- * @property {PearTrayFn | PearTrayObj} tray - Manages tray.
+ * @property {PearTray} tray - Manages tray.
  * @property {function(string): Promise<void>} message - Sends a message.
  * @property {function((Object|function(Object)), function(Object)=): StreamxReadable} messages - Subscribes to messages.
  * @property {function(Object): Promise<void>} checkpoint - Sets Pear.config.checkpoint state.
