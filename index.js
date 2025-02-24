@@ -81,8 +81,6 @@
  * @property {function(number=): void} exit - Exits the application with optional exit code, default 0.
  */
 
-Pear.tray({ icon2: '' }, (key) => {})
-
 /**
  * @typedef {Object} PearGUI
  * @extends Pear
