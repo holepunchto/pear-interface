@@ -39,23 +39,6 @@
  */
 
 /**
- * @typedef {Object} PearGUI
- * @extends Pear
- * @property {Object} media - Manages media access and status.
- * @property {Object} media.status - Media access status methods.
- * @property {function(): Promise<string>} media.status.microphone - Checks microphone access status.
- * @property {function(): Promise<string>} media.status.camera - Checks camera access status.
- * @property {function(): Promise<string>} media.status.screen - Checks screen access status.
- * @property {Object} media.access - Methods to request media access.
- * @property {function(): Promise<boolean>} media.access.microphone - Requests microphone access.
- * @property {function(): Promise<boolean>} media.access.camera - Requests camera access.
- * @property {function(): Promise<boolean>} media.access.screen - Requests screen access.
- * @property {function(Object=): Promise<Array>} media.desktopSources - Retrieves desktop sources.
- * @property {PearWindow} PearWindow - Pear.Window control class.
- * @property {PearView} PearView - Pear.View control class.
- */
-
-/**
  * @global
  * @type {Pear}
  **/
