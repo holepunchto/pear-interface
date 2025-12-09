@@ -116,4 +116,4 @@
  * @type {Pear}
  **/
 
-const Pear = global.Pear
+const Pear = global.Pear // lunte-disable-line no-unused-vars
